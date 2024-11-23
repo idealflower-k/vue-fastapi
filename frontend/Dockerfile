@@ -8,7 +8,7 @@ RUN npm install
 
 ADD . .
 
-RUN npn run build
+RUN npm run build
 
 FROM nginx:alpine
 
