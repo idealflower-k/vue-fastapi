@@ -35,10 +35,10 @@ jobs:
     # 5. Docker Hub에 이미지 푸시
     - name: Push Docker image to Docker Hub
       run: |
-        docker push oolralra/backend:${{ github.run_number }}
-        docker push oolralra/frontend:${{ github.run_number }}
-        docker push oolralra/backend:latest
-        docker push oolralra/frontend:latest
+        docker push idealflowerr/backend:${{ github.run_number }}
+        docker push idealflowerr/frontend:${{ github.run_number }}
+        docker push idealflowerr/backend:latest
+        docker push idealflowerr/frontend:latest
         
     # 6. SSH 설정: GitHub Secrets에서 EC2 접근에 필요한 키와 주소 설정
     - name: Set up SSH keys
