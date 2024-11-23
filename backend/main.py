@@ -17,7 +17,7 @@ app.add_middleware(
 )
 
 
-@app.get("/api")
+@app.get("/")
 def read_root():
     response = {
         'data': [
