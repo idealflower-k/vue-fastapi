@@ -1,6 +1,6 @@
 services:
   frontend:
-    image: idealflowerr/frontend:1
+    image: idealflowerr/frontend:latest
     # 본인 도커허브에 맞게 수정.
     ports:
       - "80:80"
@@ -10,7 +10,7 @@ services:
       - cnet
 
   backend:
-    image: idealflowerr/backend:1
+    image: idealflowerr/backend:latest
     # 본인 도커허브에 맞게 수정.
     networks:
       - cnet
