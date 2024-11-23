@@ -1,4 +1,4 @@
-FROM node:16
+FROM node:16 AS build
 
 WORKDIR /app
 
@@ -8,4 +8,10 @@ RUN npm install
 
 ADD . .
 
-CMD ["npm","run","serve"]
+RUN npn run build
+
+FROM nginx:alpine
+
+COPY --from=build /app/dist /usr/share/nginx/html
+
+COPY --from=build /app/default.conf /etc/nginx/conf.d/default.conf
